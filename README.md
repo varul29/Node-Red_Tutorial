@@ -10,7 +10,7 @@ Windows
 Raspberry Pi
 BeagleBone Black
 
-Which uses the operating system Windows, Linux, Ubuntu can download the LTS(Long Term Support) version and check the Node.JS version
+Which uses the operating system Windows, Linux, Ubuntu can download the LTS(Long Term Support) version and check the Node.JS version in Node.JS shell
 
     node -v
 
@@ -25,15 +25,15 @@ After the installation run the let’s start the node red:
   - Open the command prompt in the operating system
   - Write node-red and enter it 
 
-
+![alt text](https://github.com/varul29/Node-Red_MQTT_Tutorial/blob/master/Node-Red_Snapshot/Cmd1.PNG)
 
   - As in highlight area of the snapshot, the local server IP for hardware will be displayed e.g.127.x.x.1:1880
 
-
+![alt text](https://github.com/varul29/Node-Red_MQTT_Tutorial/blob/master/Node-Red_Snapshot/cmd2.PNG)
 
   - Copy the mentioned above IP and paste it in the web browser, click enter.
 
-
+![alt text](https://github.com/varul29/Node-Red_MQTT_Tutorial/blob/master/Node-Red_Snapshot/Node%20Red%20Display.PNG)
 
 ##  MQTT Broker
 
@@ -42,11 +42,11 @@ The Node-RED does not include an MQTT broker which helps to create the connectio
   - Click on the top right option corner.
   - Select Manage Palette
 
-
+![alt text](https://github.com/varul29/Node-Red_MQTT_Tutorial/blob/master/Node-Red_Snapshot/Manage%20Palette.PNG)
 
   - In User Settings page click Install
 
-
+![alt text](https://github.com/varul29/Node-Red_MQTT_Tutorial/blob/master/Node-Red_Snapshot/Manage%20Palette%20user%20settings%20page.PNG)
 
   - Search node-red-contrib-mqtt-broker
   - Click on Install Button
@@ -70,13 +70,15 @@ If you want to install the dashboard using Manage Pallete then:
   - In User Settings page click Install
   - Search node-red-dashboard
 
-
+![alt text](https://github.com/varul29/Node-Red_MQTT_Tutorial/blob/master/Node-Red_Snapshot/Manage%20Palette.PNG)
 
   - Click on Install Button
 
+![alt text](https://github.com/varul29/Node-Red_MQTT_Tutorial/blob/master/Node-Red_Snapshot/Manage%20Palette%20user%20settings%20page.PNG)
+
 After the Installation in the main screen of Node-Red on the left side option will be able to select the dashboard option. Using mentioned below image you can drag whatever node you want to use in the flow.
 
-
+![alt text](https://github.com/varul29/Node-Red_MQTT_Tutorial/blob/master/Node-Red_Snapshot/drag%20image.gif)
 
 Note: The mentioned above Image is just the example of how to drag the nodes to flow. We will be discussing nodes in next topics
 
@@ -91,27 +93,29 @@ The Node-Red service is built on Node.JS and using version 0.14 MQTT nodes confi
 
   - We will drag or copy and paste 3 MQTT node and will give a different unique name to their topics.
   - Double click on MQTT node
-  - In, Edit MQTT in node setting, Click on the edit button mention on right side Server textbox.
+  - In, "Edit MQTT" in "node setting", Click on the "edit" button mention on right side Server textbox.
 
+![alt text](https://github.com/varul29/Node-Red_MQTT_Tutorial/blob/master/Node-Red_Snapshot/MQTT%20Edit%20node.PNG)
      
   - In Edit MQTT-Broker-Node, give a unique name to MQTT node.
-  - Write a server name which which is earlier mentioned while coding the  ESP8266 in Arduino IDE
+  - Write a "server name" which which is earlier mentioned while coding the  ESP8266 in Arduino IDE
 
         #define mqtt_server "iot.eclipse.org”
 
   - Set the time session after which the MQTT server will receive the message from the sensor hardware.
-  - Click Update button in Edit MQTT-Broker-Node
+  - Click "Update" button in Edit MQTT-Broker-Node
 
+![alt text](https://github.com/varul29/Node-Red_MQTT_Tutorial/blob/master/Node-Red_Snapshot/PIC4%20MQTT%20settings%20setup.PNG)
 
-
-  - Set the topic name which is earlier mentioned in Arduino IDE code
+  - Set the "Topic" name which is earlier mentioned in Arduino IDE code
 
         #define humidity_topic "humid"
         #define temperature_C "Ctemp"
         #define temperature_F "Ftemp"
  
   - Click Done Button, Edit MQTT in node setting
-
+  
+![alt text](https://github.com/varul29/Node-Red_MQTT_Tutorial/blob/master/Node-Red_Snapshot/Pic%203%20Ftemp.PNG)  
 	
 Note: 
 
@@ -124,6 +128,7 @@ Note:
 
   - Similar to MQTT node here also, drag or copy and paste 3 Debug node and will set the default settings. 
 
+![alt text](https://github.com/varul29/Node-Red_MQTT_Tutorial/blob/master/Node-Red_Snapshot/Debug%20node.PNG)
 
   Gauge node from Dashboard node option
 
@@ -131,28 +136,27 @@ Note:
   - Double Click on gauge nodes.
   - In Edit Gauge Node, Fill up your instruction which you want to display in the Dashboard with Every Gauge.
   - Click Done.
-
-
-The Final node red output will be
-
+ 
+ ![alt text](https://github.com/varul29/Node-Red_MQTT_Tutorial/blob/master/Node-Red_Snapshot/PIC5%20dashboard%20Gauge.PNG)
 
 Connect all the node as mentioned below in snapshot and then click on the deploy button on the top right corner
+The Final node red output will be
+
+![alt text](https://github.com/varul29/Node-Red_MQTT_Tutorial/blob/master/Node-Red_Snapshot/Pic%201.PNG)
 
 On the top right   select the dashboard option.  
 
-
+![alt text](https://github.com/varul29/Node-Red_MQTT_Tutorial/blob/master/Node-Red_Snapshot/Dash1.PNG)
 
 Below the dashboard, you will select the dashboard screen button by clicking on which the screen will appear in which Dashboard gauge will be available.
 
-
+![alt text](https://github.com/varul29/Node-Red_MQTT_Tutorial/blob/master/Node-Red_Snapshot/Dash2.PNG)
 
 ## Output
 
 We will be able to check the output display as mentioned in a snapshot below
 
-
-
-
+![alt text](https://github.com/varul29/Node-Red_MQTT_Tutorial/blob/master/Node-Red_Snapshot/Gauge%20Screen.PNG)
 
 ## Limitations
 
